@@ -1,0 +1,22 @@
+#include<iostream>
+using namwspace std;
+class Solution {
+public:
+     int sum=0;
+        int sum_of_sq (int n)
+            {
+            while(n>0){
+                sum+=(n%10)*(n%10);
+                n/=10;}
+            return sum;
+            }
+    bool isHappy(int num) {
+        while(num>6){
+            num=sum_of_sq(num);
+            sum=0;
+            }
+        if(num==1)
+            return true;
+        return false;
+        }
+    };
