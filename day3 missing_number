@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int missing_Number(vector<int>& nums) {
+        int a_sum=0;
+        int n=nums.size();
+        int sum=(n*(n+1))/2;
+        for(auto a: nums)
+            a_sum+=a;
+        return sum-a_sum;
+        
+    }
+};
+
+
+	
