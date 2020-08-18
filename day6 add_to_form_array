@@ -1,0 +1,25 @@
+#include<iostream>
+using namwspace std;
+class Solution {
+public:
+    vector<int> addToArrayForm(vector<int>& vec, int k) {
+        
+        
+        int num=0;
+        for(auto a: vec)
+            num=(num*10)+a;
+        num+=k;
+        if(num==0){
+            vector<int>vect(1,0);
+            return vect;}
+        int m=log10(num);
+        vector<int>v((m+1),0);
+        for(int i=m;i>=0;i--){
+            v[i]=num%10;
+            num/=10;
+            }
+        return v;
+            
+        
+    }
+};
