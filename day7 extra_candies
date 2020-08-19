@@ -1,0 +1,18 @@
+class Solution {
+public:
+    vector<bool> kidsWithCandies(vector<int>& candies, int extra_candies) {
+        int n = candies.size();
+        if (n==0) return {};
+        int max_val=*max_element(candies.begin(),candies.end());
+        vector<bool>v(n,true);
+        for(int k=0;k<n;k++){
+            if((candies[k]+ extra_candies) <max_val)
+                v[k]= false;
+        }
+                
+            
+          
+        return v;
+        
+    }
+};
