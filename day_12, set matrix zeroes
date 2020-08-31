@@ -1,0 +1,20 @@
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+        int n=matrix.size();
+        int m=matrix[0].size();
+        vector<int>vect;
+        for(int i=0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(matrix [i][j]==0){
+                    vect.push_back(i);
+                    vect.push_back(j);}}}
+        int p=vect.size();
+        for(int i=0;i<p;i+=2){
+            for(int j=0;j<m;j++){
+                matrix [vect[i]][j]=0;}}
+        for(int i=1;i<p;i+=2){
+            for(int j=0;j<n;j++){
+                matrix[j][vect[i]]=0;}}
+        }
+    };
